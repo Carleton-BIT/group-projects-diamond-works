@@ -1,82 +1,82 @@
-{
-margin:0;
-padding:0;
-box-sizing:border-box;
-font-family:Arial, sans-serif;
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, sans-serif;
 }
 
 body{
-    height:100vh;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    background:linear-gradient(135deg, black, red, white);
+    background:rgb(247, 246, 246);
 }
 
 .signup-container{
-    background:white;
-    padding:40px;
+    background: linear-gradient(135deg, #8B0000, #ffffff);
+    padding:50px;
     border-radius:12px;
     width:350px;
-    box-shadow:0 20px 25px rgba(0, 0, 0, 0.2);
+    margin:120px auto;
+    box-shadow:0 20px 25px rgba(0,0,0,0.2);
 }
 
-.signup-container h2 {
+.signup-container h2{
     text-align:center;
-    margin-bottom: 20px;
+    margin-bottom:20px;
+    color:white;
 }
 
-.input-group {
-    margin-bottom: 15px;
+.input-group{
+    margin-bottom:15px;
 }
 
-.input-group label {
+.input-group label{
     display:block;
-    margin-bottom: 5px;
+    margin-bottom:5px;
+    color:white;
+    font-weight:bold;
 }
 
-.input-group input {
-    width:100%;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 6px;
-    transition: 2.5s ease;
-}
-
-.input-group input:focus {
-    border-color: black;
-    outline: none;
-}
-
-button {
+.input-group input{
     width:100%;
     padding:10px;
-    background-color: black;
-    border: none;
+    border:none;
+    border-radius:6px;
+    transition:0.3s ease;
+}
+
+.input-group input:focus{
+    outline:none;
+    box-shadow:0 0 8px rgba(139,0,0,0.6);
+}
+
+button{
+    width:100%;
+    padding:10px;
+    background-color:#8B0000;
+    border:none;
     color:white;
     border-radius:6px;
     cursor:pointer;
     font-size:16px;
     margin-top:10px;
-    transition:0.2s ease;
+    transition:0.3s ease;
 }
 
-button:hover {
-    background-color:darkred;
-    text-decoration: underline;
+button:hover{
+    background-color:black;
 }
 
-.login-link {
+.login-link{
     text-align:center;
     margin-top:15px;
     font-size:14px;
 }
 
-.login-link a {
-    color: red;
-    text-decoration: none;
+.login-link a{
+    color:white;
+    text-decoration:none;
+    font-weight:bold;
 }
 
-.login-link a:hover {
-    text-decoration: underline;
+.login-link a:hover{
+    text-decoration:underline;
 }
