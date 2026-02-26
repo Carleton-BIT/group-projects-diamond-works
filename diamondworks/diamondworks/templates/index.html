@@ -1,0 +1,57 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CU Eats</title>
+
+   <link rel="stylesheet" href="{% static 'css/header.css' %}">
+<link rel="stylesheet" href="{% static 'css/index.css' %}">
+</head>
+
+<body>
+
+<header class="main-header">
+    <a href="/" class="logo"></a>
+        <img src="{% static 'img/logo.png' %}" alt="Logo" class="logo-img">
+        CUEats</span>
+    </a>
+
+    <nav class="nav-links">
+        <a href="/">Home</a>
+        <a href="/signup/">Sign Up</a>
+        <a href="/login/">Log In</a>
+    </nav>
+</header>
+
+
+<section class="hero">
+
+   <img src="{% static 'img/unistudents.jpg' %}" alt="University Students eating" class="hero-image">
+</section>
+
+
+
+<section class="intro">
+
+    <h1>
+        A place to help Carleton Students find food that is affordable around the Ottawa area
+    </h1>
+
+</section>
+
+
+
+<section class="cta">
+
+    <h2>Join us today!</h2>
+
+    <div class="buttons">
+        <a href="/login/" class="btn">Log In</a>
+        <a href="/signup/" class="btn btn-outline">Sign Up</a>
+    </div>
+
+</section>
+
+</body>
+</html>
