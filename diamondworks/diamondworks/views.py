@@ -26,4 +26,16 @@ def signup(request):
     return render(request, "signup.html", context)
 
 def login(request):
-    return render(request, "Login.html", {"error": "TEST ERROR"})
+    context = {}
+
+    if request.method == "POST":
+        email = request.POST.get("email", "").strip().lower()
+        password = request.POST.get("password", "")
+
+        if not email.endswith("@cmail.carleton.ca"):
+            context["error"] = "Only Carleton emails are allowed."
+        else:
+            # simple demo (not real auth)
+            context["success"] = "login accepted."
+
+    return render(request, "login.html", context)
