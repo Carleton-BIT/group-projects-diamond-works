@@ -39,3 +39,16 @@ def login(request):
             context["success"] = "login accepted."
 
     return render(request, "login.html", context)
+
+def forgot_password(request):
+    context = {}
+
+    if request.method == "POST":
+        email = request.POST.get("email", "").strip().lower()
+
+        if not email.endswith("@cmail.carleton.ca"):
+            context["error"] = "Only Carleton emails are allowed."
+        else:
+            context["success"] = "If this email exists, a reset link was sent."
+
+    return render(request, "forgot_password.html", context)
