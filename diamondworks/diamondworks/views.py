@@ -1,8 +1,10 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
+from django.contrib import messages
 
 def home(request):
     return render(request, "index.html")
-
+def homepage(request):
+    return render(request, "homepage.html")
 def signup(request):
     context = {}
 
@@ -36,6 +38,20 @@ def login(request):
             context["error"] = "Only Carleton emails are allowed."
         else:
             # simple demo (not real auth)
-            context["success"] = "login accepted."
+            messages.success(request, "You are now logged in.")
+            return redirect("homepage")
 
     return render(request, "login.html", context)
+
+def forgot_password(request):
+    context = {}
+
+    if request.method == "POST":
+        email = request.POST.get("email", "").strip().lower()
+
+        if not email.endswith("@cmail.carleton.ca"):
+            context["error"] = "Only Carleton emails are allowed."
+        else:
+            context["success"] = "If this email exists, a reset link was sent."
+
+    return render(request, "forgot_password.html", context)
