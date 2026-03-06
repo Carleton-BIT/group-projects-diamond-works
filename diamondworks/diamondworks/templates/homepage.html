@@ -3,13 +3,34 @@
 <head>
     <meta charset="UTF-8">
     <title>CU Eats</title>
-    <link rel="stylesheet"  href="{% static 'css/homepage.css' %}">">
+     {% load static %}
+    <link rel="stylesheet" href="{% static 'css/login.css' %}">
+    <link rel="stylesheet" href="{% static 'css/header.css' %}">
+    <link rel="stylesheet" href="{% static 'css/homepage.css' %}">
+    <link rel="stylesheet" href="{% static 'css/forgot_password.css' %}">
 </head>
 <body>
 
-<header>
+{% if messages %}
+    {% for message in messages %}
+        <p class="success">{{ message }}</p>
+    {% endfor %}
+{% endif %}
+
+<header class="main-header">
+    <a href="index.html" class="logo">
+        <img src="{% static 'img/logo.png' %}" alt="Logo" class="logo-img">
+        CUEats</span>
+    </a>
+    
   <h1>CU-Eats</h1>
   <input type="text" class="search-bar" placeholder="Search">
+
+    <nav class="nav-links">
+        <a href="/">Home</a>
+<a href="/signup/">Sign Up</a>
+<a href="/login/">Log In</a>
+    </nav>
 </header>
 
 <main>
