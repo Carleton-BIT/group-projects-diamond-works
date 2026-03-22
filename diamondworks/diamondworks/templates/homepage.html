@@ -11,12 +11,6 @@
 </head>
 <body>
 
-{% if messages %}
-    {% for message in messages %}
-        <p class="success">{{ message }}</p>
-    {% endfor %}
-{% endif %}
-
 <header class="main-header">
     <a href="/" class="logo">
         <img src="{% static 'img/logo.png' %}" alt="Logo" class="logo-img">
@@ -28,8 +22,6 @@
 
     <nav class="nav-links">
         <a href="/">Home</a>
-<a href="/signup/">Sign Up</a>
-<a href="/login/">Log In</a>
     </nav>
 </header>
 

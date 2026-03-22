@@ -1,5 +1,6 @@
 from django.shortcuts import render, redirect
-from django.contrib import messages
+#from django.contrib import messages
+#from django.contrib.auth.decorators import login_required
 
 def home(request):
     return render(request, "index.html")
@@ -26,22 +27,6 @@ def signup(request):
             context["success"] = "Account created successfully!"
 
     return render(request, "signup.html", context)
-
-def login(request):
-    context = {}
-
-    if request.method == "POST":
-        email = request.POST.get("email", "").strip().lower()
-        password = request.POST.get("password", "")
-
-        if not email.endswith("@cmail.carleton.ca"):
-            context["error"] = "Only Carleton emails are allowed."
-        else:
-            # simple demo (not real auth)
-            messages.success(request, "You are now logged in.")
-            return redirect("homepage")
-
-    return render(request, "login.html", context)
 
 def forgot_password(request):
     context = {}
