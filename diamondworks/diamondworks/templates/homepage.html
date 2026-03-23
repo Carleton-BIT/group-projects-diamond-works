@@ -28,8 +28,11 @@
 
     <nav class="nav-links">
         <a href="/">Home</a>
-<a href="/signup/">Sign Up</a>
-<a href="/login/">Log In</a>
+        <a href="/signup/">Sign Up</a>
+        <a href="/login/">Log In</a>
+        {% if request.session.email %}
+        <a href="/account/">My Account</a>
+    {% endif %}
     </nav>
 </header>
 
