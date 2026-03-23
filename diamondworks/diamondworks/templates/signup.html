@@ -12,11 +12,11 @@
 
 
 <header class="main-header">
-    <a href="index.html" class="logo">
+    <a href="/" class="logo">
         <img src="{% static 'img/logo.png' %}" alt="Logo" class="logo-img">
-        CUEats</span>
+        <span>CUEats</span>
     </a>
-
+    
     <nav class="nav-links">
         <a href="/">Home</a>
 <a href="/signup/">Sign Up</a>
@@ -36,7 +36,7 @@
     {% endif %}
 
     {% if success %}
-      <p style="color:green; text-align:center;">{{ success }}</p>
+      <p style="color:rgb(255, 255, 255); text-align:center;">{{ success }}</p>
     {% endif %}
 
     <div class="input-group">
