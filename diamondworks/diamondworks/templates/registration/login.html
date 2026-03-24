@@ -21,44 +21,38 @@
 
     <nav class="nav-links">
         <a href="/">Home</a>
-<a href="/signup/">Sign Up</a>
-<a href="/login/">Log In</a>
+<a href="{% url 'signup' %}">Sign Up</a>
+<a href="{% url 'login' %}">Log In</a>
     </nav>
 </header>
-
-
 
 <!-- Login Form -->
 <div class="signup-container">
   <h2>Log In</h2>
 
-  
-    <form method="POST" action="/login/">
+    {% if form.errors %}
+    <p style="color:rgb(58, 50, 122); text-align:center;">Only Carleton users are allowed.</p>
+  {% endif %}
+    
+<form method="POST" action="{% url 'login' %}">
   {% csrf_token %}
-
-  {% if error %}
-    <p style="color:rgb(58, 50, 122); text-align:center;">{{ error }}</p>
-  {% endif %}
-  {% if success %}
-    <p style="color:green; text-align:center;">{{ success }}</p>
-  {% endif %}
-
-  <div class="input-group">
-    <label for="email">Email</label>
-    <input type="email" id="email" name="email" placeholder="Enter your email" required>
+<div class="input-group">
+    <label>Username</label>
+   <input type="text" id="id_username" name="username" placeholder="Enter your username" required>   
   </div>
-
+  
   <div class="input-group">
     <label for="password">Password</label>
     <input type="password" id="password" name="password" placeholder="Enter your password" required>
   </div>
-    
+      
 <a href="{% url 'forgot_password' %}">Forgot password?</a>
     
   <button type="submit">Log In</button>
   <p class="login-link">
   Don't have an account? <a href="/signup/">Sign Up</a>
 </p>
+     
 </form>
 </div>
 

@@ -1,4 +1,4 @@
-"""
+""""
 URL configuration for diamondworks project.
 
 The `urlpatterns` list routes URLs to views. For more information please see:
@@ -16,14 +16,15 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from .views import home, homepage, signup, login, forgot_password
+from .views import home, homepage, signup, login_view, logout_view, forgot_password, about, support
 
 urlpatterns = [
     path("admin/", admin.site.urls),
     path("", home, name="home"),
     path("homepage/", homepage, name="homepage"),
     path("signup/", signup, name="signup"),
-    path("login/", login, name="login"),
+    path("login/", login_view, name="login"),
+    path("logout/", logout_view, name="logout"),
     path("forgot-password/", forgot_password, name="forgot_password"),
     path("about/", about, name="about"),
     path("support/", support, name="support"),
