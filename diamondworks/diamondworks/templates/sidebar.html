@@ -1,0 +1,49 @@
+<div id="main">
+    <button class="openbtn" onclick="openNav()">☰</button>
+</div>
+
+<div id="mySidebar" class="sidenav">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+
+    <a href="{% url 'home' %}">Home</a>
+    <a href="{% url 'homepage' %}">Homepage</a>
+    <a href="{% url 'about' %}">About</a>
+    <a href="{% url 'support' %}">Support</a>
+
+    <button class="dropdown-btn">Settings</button>
+    <div class="dropdown-container">
+        {% if user.is_authenticated %}
+            <form method="POST" action="{% url 'logout' %}" style="margin:0;">
+                {% csrf_token %}
+                <button type="submit">Log Out</button>
+            </form>
+        {% else %}
+            <a href="{% url 'login' %}">Log In</a>
+            <a href="{% url 'signup' %}">Sign Up</a>
+        {% endif %}
+    </div>
+</div>
+
+<script>
+function openNav() {
+    document.getElementById("mySidebar").style.width = "250px";
+}
+
+function closeNav() {
+    document.getElementById("mySidebar").style.width = "0";
+}
+
+var dropdown = document.getElementsByClassName("dropdown-btn");
+
+for (var i = 0; i < dropdown.length; i++) {
+    dropdown[i].addEventListener("click", function() {
+        this.classList.toggle("active");
+        var dropdownContent = this.nextElementSibling;
+        if (dropdownContent.style.display === "block") {
+            dropdownContent.style.display = "none";
+        } else {
+            dropdownContent.style.display = "block";
+        }
+    });
+}
+</script>

@@ -80,3 +80,16 @@ button:hover{
 .login-link a:hover{
     text-decoration:underline;
 }
+.error {
+    color: #b30000;
+    text-align: center;
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+.success {
+    color: #006600;
+    text-align: center;
+    margin-top: 10px;
+    font-weight: bold;
+}

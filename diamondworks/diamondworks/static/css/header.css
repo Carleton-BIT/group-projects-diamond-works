@@ -1,41 +1,79 @@
+* {
+    box-sizing: border-box;
+}
 
 .main-header {
     width: 100%;
     background: linear-gradient(90deg, #8B0000, #000000);
     color: white;
-    padding: 15px 40px;
+    padding: 15px 20px;
     display: flex;
     justify-content: space-between;
     align-items: center;
     box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    overflow: hidden;
 }
 
-
 .logo {
+    display: flex;
+    align-items: center;
     font-size: 24px;
     font-weight: bold;
     letter-spacing: 1px;
+    text-decoration: none;
+    color: white;
+    flex-shrink: 0;
 }
 
 .logo span {
     color: #ff4d4d;
 }
-.logo-img{
-    width:40px;
-    height:40px;
-    object-fit:contain;
-    margin-right:10px;
+
+.logo-img {
+    width: 40px;
+    height: 40px;
+    object-fit: contain;
+    margin-right: 10px;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: nowrap;
+    overflow: hidden;
 }
 
 .nav-links a {
-    margin-left: 25px;
     text-decoration: none;
     color: white;
     font-weight: 500;
     transition: 0.3s ease;
+    white-space: nowrap;
+    font-size: 14px;
 }
-
 
 .nav-links a:hover {
     color: #ff4d4d;
+}
+
+.nav-links form {
+    margin: 0;
+    display: inline-flex;
+}
+
+.nav-links button {
+    background: white;
+    color: black;
+    border: 2px solid #8B0000;
+    padding: 6px 12px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-weight: bold;
+    white-space: nowrap;
+    font-size: 14px;
+}
+
+.nav-links button:hover {
+    background: #f0f0f0;
 }
