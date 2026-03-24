@@ -27,10 +27,14 @@
   <input type="text" class="search-bar" placeholder="Search">
 
     <nav class="nav-links">
-        <form method="POST" action="{% url 'logout' %}">
-  {% csrf_token %}
-  <button type="submit">Logout</button>
-</form>
+    {% if user.is_authenticated %}
+  <form method="POST" action="{% url 'logout' %}">
+    {% csrf_token %}
+    <button type="submit">Logout</button>
+  </form>
+{% else %}
+  <a href="{% url 'login' %}">Login</a>
+{% endif %}
     </nav>
 </header>
 
