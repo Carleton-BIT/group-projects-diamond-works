@@ -11,10 +11,10 @@
 </head>
 <body>
 
-{% if messages %}
-    {% for message in messages %}
-        <p class="success">{{ message }}</p>
-    {% endfor %}
+{% if user.is_authenticated %}
+  <p>You are now logged in, {{ user.username }}</p>
+{% else %}
+  <a href="{% url 'login' %}">Login</a>
 {% endif %}
 
 <header class="main-header">
@@ -33,6 +33,14 @@
         {% if request.session.email %}
         <a href="/account/">My Account</a>
     {% endif %}
+    {% if user.is_authenticated %}
+  <form method="POST" action="{% url 'logout' %}">
+    {% csrf_token %}
+    <button type="submit">Logout</button>
+  </form>
+{% else %}
+  <a href="{% url 'login' %}">Login</a>
+{% endif %}
     </nav>
 </header>
 
