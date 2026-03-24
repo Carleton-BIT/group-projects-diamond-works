@@ -1,0 +1,113 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: rgb(247, 246, 246);
+}
+
+.account-container {
+    width: 700px;
+    margin: 50px auto;
+    background: white;
+    border-radius: 12px;
+    padding: 35px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+}
+
+.account-container h1 {
+    margin-bottom: 25px;
+    color: black;
+    font-size: 36px;
+}
+
+.profile-card {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 30px;
+}
+
+.avatar {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background-color: darkred;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 32px;
+    font-weight: bold;
+}
+
+.profile-info h2 {
+    margin: 0 0 6px 0;
+    font-size: 24px;
+}
+
+.profile-info p {
+    margin: 0;
+    color: #555;
+}
+
+.account-form {
+    margin-top: 10px;
+}
+
+.input-group {
+    margin-bottom: 18px;
+}
+
+.input-group label {
+    display: block;
+    margin-bottom: 6px;
+    font-weight: bold;
+    color: black;
+}
+
+.input-group input,
+.input-group select {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 15px;
+    box-sizing: border-box;
+}
+
+.input-group input:focus,
+.input-group select:focus {
+    outline: none;
+    border-color: darkred;
+    box-shadow: 0 0 5px rgba(139, 0, 0, 0.2);
+}
+
+.save-btn {
+    width: 100%;
+    padding: 14px;
+    border: none;
+    border-radius: 8px;
+    background-color: darkred;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.save-btn:hover {
+    background-color: black;
+}
+
+.success-message {
+    text-align: center;
+    color: green;
+    font-weight: bold;
+    margin-top: 20px;
+}
+
+footer {
+    text-align: center;
+    padding: 15px;
+    background-color: darkred;
+    color: white;
+    margin-top: 30px;
+}
