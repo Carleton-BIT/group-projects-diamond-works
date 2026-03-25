@@ -1,0 +1,94 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wendy's</title>
+
+    <link rel="stylesheet" href="{% static 'css/header.css' %}">
+    <link rel="stylesheet" href="{% static 'css/sidebar.css' %}">
+    <link rel="stylesheet" href="{% static 'css/resturantpage.css' %}">
+</head>
+<body>
+
+{% include 'sidebar.html' %}
+
+<header class="main-header">
+    <a href="{% url 'homepage' %}" class="logo">
+        <img src="{% static 'img/logo.png' %}" alt="CU Eats Logo" class="logo-img">
+        <span>CUEats</span>
+    </a>
+
+    <nav class="nav-links">
+        <a href="{% url 'homepage' %}">Home</a>
+        <a href="{% url 'about' %}">About</a>
+        <a href="{% url 'support' %}">Support</a>
+
+        {% if user.is_authenticated %}
+            <form method="POST" action="{% url 'logout' %}" style="display:inline;">
+                {% csrf_token %}
+                <button type="submit">Logout</button>
+            </form>
+        {% else %}
+            <a href="{% url 'signup' %}">Sign Up</a>
+            <a href="{% url 'login' %}">Log In</a>
+        {% endif %}
+    </nav>
+</header>
+
+<header class="header">
+    <div class="logo-container">
+        <img src="{% static 'img/images/wendylogo.png' %}" alt="Wendy's Logo" class="restaurant-logo">
+    </div>
+
+    <h1>Wendy's</h1>
+    <p class="discount">Up to 20% off and more!</p>
+</header>
+
+<main class="food-section">
+    <div class="food-grid">
+
+        <div class="food-item">
+            <img src="{% static 'img/images/wendyburger.png' %}" alt="Burger">
+            <div class="food-info">
+                <h3>Any Burger + Free Medium Fry</h3>
+                <p>Free fries with purchase</p>
+            </div>
+        </div>
+
+        <div class="food-item">
+            <img src="{% static 'img/images/frosty.png' %}" alt="Frosty">
+            <div class="food-info">
+                <h3>Small Frosty</h3>
+                <p>Only $1</p>
+            </div>
+        </div>
+
+        <div class="food-item">
+            <img src="{% static 'img/images/10 Nuggets -  Classic_0.png' %}" alt="Chicken Nuggets">
+            <div class="food-info">
+                <h3>6 Piece Nuggets</h3>
+                <p>20% Off</p>
+            </div>
+        </div>
+
+        <div class="food-item">
+            <img src="{% static 'img/images/drink.webp' %}" alt="Fountain Drink">
+            <div class="food-info">
+                <h3>Fountain Drink</h3>
+                <p>20% Off</p>
+            </div>
+        </div>
+
+    </div>
+</main>
+
+<footer class="footer">
+    <h3>Limited Time Offers 🍟</h3>
+    <p>Grab your favorites now!</p>
+    <img src="{% static 'img/images/ExampleCode.png' %}" alt="QR Code" class="qr-code">
+</footer>
+
+</body>
+</html>

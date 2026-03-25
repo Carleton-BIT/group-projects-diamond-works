@@ -4,12 +4,10 @@
 <head>
     <meta charset="UTF-8">
     <title>About Us - CU Eats</title>
-
     <link rel="stylesheet" href="{% static 'css/header.css' %}">
-    <link rel="stylesheet" href="{% static 'css/aboutus.css' %}">
     <link rel="stylesheet" href="{% static 'css/sidebar.css' %}">
+    <link rel="stylesheet" href="{% static 'css/aboutus.css' %}">
 </head>
-
 <body>
 
 {% include 'sidebar.html' %}
@@ -21,48 +19,46 @@
     </a>
 
     <nav class="nav-links">
+    {% if user.is_authenticated %}
+        <a href="{% url 'homepage' %}">Home</a>
+    {% else %}
         <a href="{% url 'home' %}">Home</a>
-        <a href="{% url 'homepage' %}">Homepage</a>
-        <a href="{% url 'about' %}">About</a>
-        <a href="{% url 'support' %}">Support</a>
+    {% endif %}
 
-        {% if user.is_authenticated %}
-            <form method="POST" action="{% url 'logout' %}" style="display:inline;">
-                {% csrf_token %}
-                <button type="submit">Logout</button>
-            </form>
-        {% else %}
-            <a href="{% url 'signup' %}">Sign Up</a>
-            <a href="{% url 'login' %}">Log In</a>
-        {% endif %}
-    </nav>
+    <a href="{% url 'about' %}">About</a>
+    <a href="{% url 'support' %}">Support</a>
+
+    {% if user.is_authenticated %}
+        <form method="POST" action="{% url 'logout' %}">
+            {% csrf_token %}
+            <button type="submit">Logout</button>
+        </form>
+    {% else %}
+        <a href="{% url 'signup' %}">Sign Up</a>
+        <a href="{% url 'login' %}">Log In</a>
+    {% endif %}
+</nav>
 </header>
 
 <div class="container">
-    <section class="card">
+    <section class="card about">
         <h2>About Us</h2>
         <p>
-            CU-Eats is a platform designed to help students easily discover food options on campus.
-            We bring together different restaurants and dining services in one place, making it simple
-            to browse, search, and choose meals that fit your preferences.
+            CU-Eats is a platform designed to help students easily discover food options on campus. We bring together different restaurants and dining services in one place, making it simple to browse, search, and choose meals that fit your preferences.
         </p>
     </section>
 
-    <section class="card">
+    <section class="card goals">
         <h2>Our Goals</h2>
         <p>
-            Our goal is to simplify the dining experience for students by providing quick access to reliable
-            information about available food options and discounts. We aim to save time, reduce stress, and
-            make it easier for students to find meals that match their tastes and schedules.
+            Our goal is to simplify the dining experience for students by providing quick access to reliable information about available food options and discounts. We aim to save time, reduce stress, and make it easier for students to find meals that match their tastes and schedules.
         </p>
     </section>
 
-    <section class="card">
+    <section class="card importance">
         <h2>Why We Matter</h2>
         <p>
-            Campus life can be busy and finding the right food shouldn't be difficult or expensive.
-            CU-Eats helps students make informed decisions quickly, improving their overall campus experience.
-            By centralizing food options, we make dining more convenient and accessible for everyone.
+            Campus life can be busy and finding the right food should not be difficult or expensive. CU-Eats helps students make informed decisions quickly, improving their overall campus experience. By centralizing food options, we make dining more convenient and accessible for everyone.
         </p>
     </section>
 </div>

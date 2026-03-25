@@ -1,0 +1,90 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shawarma Palace</title>
+
+    <link rel="stylesheet" href="{% static 'css/header.css' %}">
+    <link rel="stylesheet" href="{% static 'css/sidebar.css' %}">
+    <link rel="stylesheet" href="{% static 'css/resturantpage.css' %}">
+</head>
+<body>
+
+{% include 'sidebar.html' %}
+
+<header class="main-header">
+    <a href="{% url 'homepage' %}" class="logo">
+        <img src="{% static 'img/logo.png' %}" alt="CU Eats Logo" class="logo-img">
+        <span>CUEats</span>
+    </a>
+
+    <nav class="nav-links">
+        <a href="{% url 'homepage' %}">Home</a>
+        <a href="{% url 'about' %}">About</a>
+        <a href="{% url 'support' %}">Support</a>
+
+        {% if user.is_authenticated %}
+            <form method="POST" action="{% url 'logout' %}" style="display:inline;">
+                {% csrf_token %}
+                <button type="submit">Logout</button>
+            </form>
+        {% else %}
+            <a href="{% url 'signup' %}">Sign Up</a>
+            <a href="{% url 'login' %}">Log In</a>
+        {% endif %}
+    </nav>
+</header>
+
+<header class="header">
+    <div class="logo-container">
+        <img src="{% static 'img/images/SPlogo.jpg' %}" alt="Shawarma Palace Logo" class="restaurant-logo">
+    </div>
+    <h1>Shawarma Palace</h1>
+    <p class="discount">20% Discount Today!</p>
+</header>
+
+<main class="food-section">
+    <div class="food-grid">
+        <div class="food-item">
+            <img src="{% static 'img/images/chicken-shawarma-sandwich-1.png' %}" alt="Chicken Wrap">
+            <div class="food-info">
+                <h3>Chicken Wrap</h3>
+                <p>Original: $10 | Discounted: $8</p>
+            </div>
+        </div>
+
+        <div class="food-item">
+            <img src="{% static 'img/images/Falafel-1.png' %}" alt="Falafel Plate">
+            <div class="food-info">
+                <h3>Falafel Plate</h3>
+                <p>20% off</p>
+            </div>
+        </div>
+
+        <div class="food-item">
+            <img src="{% static 'img/images/beef-shawarmasandwich-1.png' %}" alt="Beef Shawarma">
+            <div class="food-info">
+                <h3>Beef Shawarma</h3>
+                <p>20% off</p>
+            </div>
+        </div>
+
+        <div class="food-item">
+            <img src="{% static 'img/images/mixed-shawarma.png' %}" alt="Chicken Platter">
+            <div class="food-info">
+                <h3>Chicken Platter</h3>
+                <p>20% off</p>
+            </div>
+        </div>
+    </div>
+</main>
+
+<footer class="footer">
+    <h3>Scan to apply discount</h3>
+    <img src="{% static 'img/images/ExampleCode.png' %}" alt="QR Code" class="qr-code">
+</footer>
+
+</body>
+</html>
