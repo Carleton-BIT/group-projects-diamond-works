@@ -27,9 +27,6 @@ DEBUG = True
 
 ALLOWED_HOSTS = []
 
-LOGIN_REDIRECT_URL = '/homepage/'
-LOGIN_URL = '/accounts/login/'
-LOGOUT_REDIRECT_URL = "/"
 
 # Application definition
 
@@ -119,3 +116,5 @@ USE_TZ = True
 
 STATIC_URL = 'static/'
 STATICFILES_DIRS = [BASE_DIR / 'diamondworks' / 'static']
+
+LOGIN_URL = 'login'

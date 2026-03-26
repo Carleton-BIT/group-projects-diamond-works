@@ -4,9 +4,11 @@ body {
     background-color: rgb(247, 246, 246);
 }
 
+/* Main container */
 .account-container {
-    width: 700px;
-    margin: 50px auto;
+    max-width: 700px;          /* better than fixed width */
+    width: 90%;
+    margin: 60px auto;
     background: white;
     border-radius: 12px;
     padding: 35px;
@@ -16,9 +18,11 @@ body {
 .account-container h1 {
     margin-bottom: 25px;
     color: black;
-    font-size: 36px;
+    font-size: 32px;
+    text-align: center;
 }
 
+/* Profile section */
 .profile-card {
     display: flex;
     align-items: center;
@@ -37,11 +41,12 @@ body {
     justify-content: center;
     font-size: 32px;
     font-weight: bold;
+    flex-shrink: 0;
 }
 
 .profile-info h2 {
     margin: 0 0 6px 0;
-    font-size: 24px;
+    font-size: 22px;
 }
 
 .profile-info p {
@@ -49,6 +54,7 @@ body {
     color: #555;
 }
 
+/* Form */
 .account-form {
     margin-top: 10px;
 }
@@ -74,6 +80,7 @@ body {
     box-sizing: border-box;
 }
 
+/* Focus effect */
 .input-group input:focus,
 .input-group select:focus {
     outline: none;
@@ -81,6 +88,7 @@ body {
     box-shadow: 0 0 5px rgba(139, 0, 0, 0.2);
 }
 
+/* Button */
 .save-btn {
     width: 100%;
     padding: 14px;
@@ -91,23 +99,40 @@ body {
     font-size: 16px;
     cursor: pointer;
     margin-top: 10px;
+    transition: 0.3s;
 }
 
 .save-btn:hover {
     background-color: black;
 }
 
+/* Success message */
 .success-message {
     text-align: center;
     color: green;
     font-weight: bold;
-    margin-top: 20px;
+    margin: 20px 0;
 }
 
+/* Footer */
 footer {
     text-align: center;
     padding: 15px;
     background-color: darkred;
     color: white;
-    margin-top: 30px;
+    margin-top: 40px;
+}
+
+/* 🔥 Mobile fix */
+@media (max-width: 600px) {
+    .profile-card {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .avatar {
+        width: 70px;
+        height: 70px;
+        font-size: 28px;
+    }
 }

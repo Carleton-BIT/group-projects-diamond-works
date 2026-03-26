@@ -1,0 +1,72 @@
+body {
+  font-family: "Lato", sans-serif;
+}
+
+
+.sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 2000;
+  top: 0;
+  left: 0;
+  background: linear-gradient(180deg, #8B0000, #000000);
+  overflow-x: hidden;
+  transition: 0.3s ease;
+  padding-top: 60px;
+}
+
+
+.sidenav a,
+.dropdown-btn {
+  padding: 12px 20px;
+  text-decoration: none;
+  font-size: 16px;
+  color: white;
+  display: block;
+  border: none;
+  background: none;
+  width: 100%;
+  text-align: left;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+
+.sidenav a:hover,
+.dropdown-btn:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+
+.dropdown-container {
+  display: none;
+  background-color: rgba(0, 0, 0, 0.3);
+  padding-left: 10px;
+}
+
+
+.closebtn {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  font-size: 30px;
+  color: white;
+}
+
+
+.openbtn {
+  font-size: 20px;
+  cursor: pointer;
+  background: #8B0000;
+  color: white;
+  padding: 8px 14px;
+  border: none;
+  border-radius: 6px;
+  margin: 10px;
+}
+
+
+#main {
+  transition: margin-left 0.3s ease;
+}

@@ -1,52 +1,71 @@
+{% load static %}
 <!DOCTYPE html>
-<html>
-    <head>
-        <title> About Us - CU Eats </title>
-        <link rel="stylesheet" href="aboutus.css">
-    </head>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>About Us - CU Eats</title>
+    <link rel="stylesheet" href="{% static 'css/header.css' %}">
+    <link rel="stylesheet" href="{% static 'css/sidebar.css' %}">
+    <link rel="stylesheet" href="{% static 'css/aboutus.css' %}">
+</head>
+<body>
 
-    <body>
-        <header>
-            <h1>CU-Eats</h1>
+{% include 'sidebar.html' %}
 
-            <div class="right-section">
-                <nav>
-                    <a href="index.html">Home</a>
-                    <a href="aboutus.html">About</a>
-                </nav>
-            <div class="search-bar">
-                <input type="text" placeholder="Search food...">
-                <button>Search</button>
-            </div>
-            </div>
+<header class="main-header">
+    <a href="{% url 'home' %}" class="logo">
+        <img src="{% static 'img/logo.png' %}" alt="Logo" class="logo-img">
+        <span>CUEats</span>
+    </a>
 
-        </header>
+    <nav class="nav-links">
+    {% if user.is_authenticated %}
+        <a href="{% url 'homepage' %}">Home</a>
+    {% else %}
+        <a href="{% url 'home' %}">Home</a>
+    {% endif %}
 
-        <div class="container">
-        <section class="card about">
-            <h2>About Us</h2>
-            <p>
-                CU-Eats is a platform designed to help students easily discover food options on campus. We bring together different resturants and dining services in one place, making it simple to browse, search, and choose meals that fit your preferences.
-            </p>
-        </section>
+    <a href="{% url 'about' %}">About</a>
+    <a href="{% url 'support' %}">Support</a>
 
-        <section class="card goals">
-            <h2>Our Goals</h2>
-            <p>
-                Our goal is to simplify the dining experience for students by providing quick access to reliable information about available food options and discounts. We aim to save time, reduce stress, and make it easier for students to find meals that match their tastes and schedules.
-            </p>
-        </section>
+    {% if user.is_authenticated %}
+        <form method="POST" action="{% url 'logout' %}">
+            {% csrf_token %}
+            <button type="submit">Logout</button>
+        </form>
+    {% else %}
+        <a href="{% url 'signup' %}">Sign Up</a>
+        <a href="{% url 'login' %}">Log In</a>
+    {% endif %}
+</nav>
+</header>
 
-        <section class="card importance">
-            <h2>Why We Matter</h2>
-            <p>
-                Campus life can be busy and finding the right food shouldn't be difficult and expensive. CU-Eats helps students make informed decisions quickly, improving their overall campus experience. By centralizing food options, we make dining more convenient and accessible for everyone.
-            </p>
-        </section>
-            </div>
-    </body>
+<div class="container">
+    <section class="card about">
+        <h2>About Us</h2>
+        <p>
+            CU-Eats is a platform designed to help students easily discover food options on campus. We bring together different restaurants and dining services in one place, making it simple to browse, search, and choose meals that fit your preferences.
+        </p>
+    </section>
+
+    <section class="card goals">
+        <h2>Our Goals</h2>
+        <p>
+            Our goal is to simplify the dining experience for students by providing quick access to reliable information about available food options and discounts. We aim to save time, reduce stress, and make it easier for students to find meals that match their tastes and schedules.
+        </p>
+    </section>
+
+    <section class="card importance">
+        <h2>Why We Matter</h2>
+        <p>
+            Campus life can be busy and finding the right food should not be difficult or expensive. CU-Eats helps students make informed decisions quickly, improving their overall campus experience. By centralizing food options, we make dining more convenient and accessible for everyone.
+        </p>
+    </section>
+</div>
 
 <footer>
     <p>&copy; 2026 CU-Eats. All rights reserved.</p>
 </footer>
+
+</body>
 </html>

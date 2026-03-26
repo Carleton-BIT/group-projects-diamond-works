@@ -5,52 +5,46 @@
     <meta charset="UTF-8">
     <title>CU Eats</title>
 
-   <link rel="stylesheet" href="{% static 'css/header.css' %}">
-<link rel="stylesheet" href="{% static 'css/index.css' %}">
+    <link rel="stylesheet" href="{% static 'css/header.css' %}">
+    <link rel="stylesheet" href="{% static 'css/index.css' %}">
 </head>
 
 <body>
 
 <header class="main-header">
-    <a href="/" class="logo">
+    <a href="{% url 'home' %}" class="logo">
         <img src="{% static 'img/logo.png' %}" alt="Logo" class="logo-img">
         <span>CUEats</span>
     </a>
 
     <nav class="nav-links">
-        <a href="/">Home</a>
-        <a href="/signup/">Sign Up</a>
-        <a href="/accounts/login/">Log In</a>
+        <a href="{% url 'home' %}">Home</a>
+        <a href="{% url 'signup' %}">Sign Up</a>
+        <a href="{% url 'login' %}">Log In</a>
     </nav>
 </header>
 
 
 <section class="hero">
-
-   <img src="{% static 'img/unistudents.jpg' %}" alt="University Students eating" class="hero-image">
+    <img src="{% static 'img/unistudents.jpg' %}" alt="University Students eating" class="hero-image">
 </section>
-
 
 
 <section class="intro">
-
     <h1>
-        A place to help Carleton Students find food that is affordable around the Ottawa area
+        A dedicated place for Carleton students to access exclusive restaurant deals!
+        Enjoy up to 20% off, B1G1 free, and more at franchises across Ottawa!
     </h1>
-
 </section>
 
 
-
 <section class="cta">
-
     <h2>Join us today!</h2>
 
     <div class="buttons">
-        <a href="/accounts/login/" class="btn">Log In</a>
-        <a href="/signup/" class="btn btn-outline">Sign Up</a>
+        <a href="{% url 'login' %}" class="btn">Log In</a>
+        <a href="{% url 'signup' %}" class="btn btn-outline">Sign Up</a>
     </div>
-
 </section>
 
 </body>

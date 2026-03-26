@@ -8,7 +8,10 @@
 body{
     background: rgb(252, 251, 251);
 }
-
+.restaurant-logo {
+    width: 180px;   
+    height: auto;
+}
 
 .header{
     text-align: center;
