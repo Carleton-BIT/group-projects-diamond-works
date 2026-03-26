@@ -25,8 +25,8 @@
         <a href="{% url 'home' %}">Home</a>
     {% endif %}
 
-    <a href="{% url 'about' %}">About</a>
-    <a href="{% url 'support' %}">Support</a>
+    
+    
 
     {% if user.is_authenticated %}
         <form method="POST" action="{% url 'logout' %}">
@@ -41,28 +41,39 @@
 </header>
 
 <div class="container">
+
     <section class="card about">
         <h2>About Us</h2>
         <p>
-            CU-Eats is a platform designed to help students easily discover food options on campus. We bring together different restaurants and dining services in one place, making it simple to browse, search, and choose meals that fit your preferences.
-        </p>
+            CUeats works with restaurants around Ottawa to bring Carleton students access to special deals and discounts. Our goal is to make it easier to find good, affordable food without having to spend too much time or money.
+        </p> 
     </section>
 
     <section class="card goals">
         <h2>Our Goals</h2>
-        <p>
-            Our goal is to simplify the dining experience for students by providing quick access to reliable information about available food options and discounts. We aim to save time, reduce stress, and make it easier for students to find meals that match their tastes and schedules.
-        </p>
+        <ul class="goals-list">
+            <li>Help Carleton students save money on food</li>
+            <li>Work with more restaurants across Ottawa</li>
+            <li>Make student deals easy to find and use</li>
+            <li>Create a platform students can trust</li>
+        </ul>
     </section>
 
     <section class="card importance">
         <h2>Why We Matter</h2>
         <p>
-            Campus life can be busy and finding the right food should not be difficult or expensive. CU-Eats helps students make informed decisions quickly, improving their overall campus experience. By centralizing food options, we make dining more convenient and accessible for everyone.
+            Eating out can get expensive, especially as a student. CUeats helps by providing places where you can save at popular spots across the city. Whether you’re near campus or out with friends, we help you find better options for less.
         </p>
     </section>
-</div>
 
+    <section class="card features">
+        <h2>How It Works</h2>
+        <p>
+            Scan your discount code at participating restaurants to redeem your deal. Each semester, new deals are added as we partner with more restaurants across Ottawa. Deals can be used once per day, so you can keep coming back and saving.
+        </p>
+    </section>
+
+</div>
 <footer>
     <p>&copy; 2026 CU-Eats. All rights reserved.</p>
 </footer>

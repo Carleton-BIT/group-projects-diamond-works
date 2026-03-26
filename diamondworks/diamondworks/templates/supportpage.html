@@ -28,8 +28,7 @@
         <a href="{% url 'home' %}">Home</a>
     {% endif %}
 
-    <a href="{% url 'about' %}">About</a>
-    <a href="{% url 'support' %}">Support</a>
+    
 
     {% if user.is_authenticated %}
         <form method="POST" action="{% url 'logout' %}">
