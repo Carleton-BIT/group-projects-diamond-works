@@ -1,90 +1,163 @@
 /* Reset */
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    font-family:Arial, sans-serif;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
 }
 
-
-
-.hero{
-    width:100%;
-    display:flex;
-    justify-content:center;
-    margin-top:20px;
+.hero {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
 }
 
-.hero-image{
-    width:90%;
-    max-width:1100px;
-    height:350px;
-    object-fit:cover;
-    border-radius:10px;
-    box-shadow:0 9px 20px rgba(0,0,0,0.15);
+.hero-image {
+    width: 90%;
+    max-width: 1100px;
+    height: 350px;
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 0 9px 20px rgba(0,0,0,0.15);
 }
-
 
 /* INTRO TEXT */
-
-.intro{
-    text-align:center;
-    padding:40px 20px;
+.intro {
+    text-align: center;
+    padding: 40px 20px;
 }
 
-.intro h1{
-    font-size:28px;
-    max-width:900px;
-    margin:auto;
-    line-height:1.4;
-    padding:10px 25px;
-    border-radius:6px;
+.intro h1 {
+    font-size: 28px;
+    max-width: 900px;
+    margin: auto;
+    line-height: 1.4;
+    padding: 10px 25px;
+    border-radius: 6px;
     background-color: #f55151;
-    color:white;
+    color: white;
     font-style: initial;
 }
 
-
-
-.cta{
-    text-align:center;
-    padding:40px 20px 60px;
+.cta {
+    text-align: center;
+    padding: 40px 20px 60px;
 }
 
-.cta h2{
-    font-size:26px;
-    margin-bottom:20px;
+.cta h2 {
+    font-size: 26px;
+    margin-bottom: 20px;
 }
 
-
-
-.buttons{
-    display:flex;
-    justify-content:center;
-    gap:20px;
+.buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
 }
 
-.btn{
-    background:#8B0000;
-    color:white;
-    padding:12px 25px;
-    border-radius:6px;
-    text-decoration:none;
-    font-weight:bold;
-    transition:0.3s;
+.btn {
+    background: #8B0000;
+    color: white;
+    padding: 12px 25px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
 }
 
-.btn:hover{
-    background:black;
+.btn:hover {
+    background: black;
 }
 
-.btn-outline{
-    background:white;
-    color:#8B0000;
-    border:2px solid #8B0000;
+.btn-outline {
+    background: white;
+    color: #8B0000;
+    border: 2px solid #8B0000;
 }
 
-.btn-outline:hover{
-    background:#8B0000;
-    color:white;
+.btn-outline:hover {
+    background: #8B0000;
+    color: white;
+}
+
+/* TABLET */
+@media (max-width: 768px) {
+    .hero-image {
+        width: 95%;
+        height: 280px;
+    }
+
+    .intro {
+        padding: 30px 15px;
+    }
+
+    .intro h1 {
+        font-size: 24px;
+        padding: 12px 18px;
+    }
+
+    .cta {
+        padding: 30px 15px 40px;
+    }
+
+    .cta h2 {
+        font-size: 22px;
+    }
+
+    .buttons {
+        gap: 15px;
+        flex-wrap: wrap;
+    }
+
+    .btn {
+        padding: 10px 20px;
+        font-size: 14px;
+    }
+}
+
+/* MOBILE */
+@media (max-width: 480px) {
+    .hero {
+        margin-top: 15px;
+    }
+
+    .hero-image {
+        width: 95%;
+        height: 220px;
+        border-radius: 8px;
+    }
+
+    .intro {
+        padding: 20px 10px;
+    }
+
+    .intro h1 {
+        font-size: 20px;
+        line-height: 1.5;
+        padding: 10px 14px;
+    }
+
+    .cta {
+        padding: 20px 10px 30px;
+    }
+
+    .cta h2 {
+        font-size: 20px;
+        margin-bottom: 16px;
+    }
+
+    .buttons {
+        flex-direction: column;
+        align-items: center;
+        gap: 12px;
+    }
+
+    .btn {
+        width: 80%;
+        max-width: 250px;
+        text-align: center;
+        padding: 10px 16px;
+        font-size: 14px;
+    }
 }

@@ -3,6 +3,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CU Eats</title>
     <link rel="stylesheet" href="{% static 'css/header.css' %}">
     <link rel="stylesheet" href="{% static 'css/sidebar.css' %}">
@@ -25,7 +26,7 @@
     </a>
 
    
-    <input type="text" class="search-bar" placeholder="Search">
+   
 
     <nav class="nav-links">
         <a href="{% url 'homepage' %}">Home</a>
@@ -54,8 +55,8 @@
                 <h2>Shawarma Palace</h2>
                 <p>Location: Ottawa, ON</p>
                 <p>Discount: 20% Off</p>
-                <a href="{% url 'shawarmapalace' %}"class="view-details-btn">View Details</a>
-</a>
+                <a href="{% url 'shawarmapalace' %}" class="view-details-btn">View Details</a>
+
             </div>
         </div>
 

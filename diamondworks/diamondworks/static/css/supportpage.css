@@ -1,8 +1,9 @@
-html, body {
+html, body { 
     margin: 0;
     padding: 0;
     overflow-x: hidden;
 }
+
 body {
     font-family: Arial, sans-serif;
     background: #f4f4f4;
@@ -119,4 +120,99 @@ footer {
     color: white;
     margin-top: 40px;
     font-weight: bold;
+}
+
+/* TABLET */
+@media (max-width: 768px) {
+    .support-header {
+        padding: 45px 15px;
+        margin-bottom: 30px;
+    }
+
+    .support-header h1 {
+        font-size: 34px;
+    }
+
+    .support-header p {
+        font-size: 16px;
+    }
+
+    .faq,
+    .contact-support {
+        width: 90%;
+        padding: 25px;
+        margin-bottom: 30px;
+    }
+
+    .faq h2,
+    .contact-support h2 {
+        font-size: 26px;
+    }
+
+    .FAQ-question {
+        font-size: 16px;
+        padding: 16px 18px;
+    }
+
+    .FAQ-answer {
+        padding: 14px 16px;
+    }
+}
+
+/* MOBILE */
+@media (max-width: 480px) {
+    .support-header {
+        padding: 35px 12px;
+        margin-bottom: 20px;
+    }
+
+    .support-header h1 {
+        font-size: 28px;
+    }
+
+    .support-header p {
+        font-size: 14px;
+    }
+
+    .faq,
+    .contact-support {
+        width: 95%;
+        padding: 18px;
+        border-radius: 12px;
+        margin-bottom: 20px;
+    }
+
+    .faq h2,
+    .contact-support h2 {
+        font-size: 22px;
+        margin-bottom: 16px;
+    }
+
+    .FAQ-question {
+        font-size: 14px;
+        padding: 14px 16px;
+        margin-bottom: 10px;
+    }
+
+    .FAQ-answer {
+        font-size: 14px;
+        padding: 12px 14px;
+        margin-bottom: 12px;
+    }
+
+    .contact-support input,
+    .contact-support textarea {
+        padding: 12px;
+        font-size: 14px;
+    }
+
+    .contact-support button {
+        padding: 12px;
+        font-size: 14px;
+    }
+
+    footer {
+        padding: 15px;
+        font-size: 14px;
+    }
 }

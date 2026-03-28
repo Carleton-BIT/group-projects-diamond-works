@@ -1,82 +1,145 @@
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    font-family:Arial, sans-serif;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
 }
 
-body{
-    background:rgb(247, 246, 246);
+body {
+    background: rgb(247, 246, 246);
 }
 
-.signup-container{
+.signup-container {
     background: linear-gradient(135deg, #8B0000, #ffffff);
-    padding:50px;
-    border-radius:12px;
-    width:350px;
-    margin:120px auto;
-    box-shadow:0 20px 25px rgba(0,0,0,0.2);
+    padding: 50px;
+    border-radius: 12px;
+    width: 350px;
+    max-width: 90%;
+    margin: 120px auto;
+    box-shadow: 0 20px 25px rgba(0,0,0,0.2);
 }
 
-.signup-container h2{
-    text-align:center;
-    margin-bottom:20px;
-    color:white;
+.signup-container h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: white;
 }
 
-.input-group{
-    margin-bottom:15px;
+.input-group {
+    margin-bottom: 15px;
 }
 
-.input-group label{
-    display:block;
-    margin-bottom:5px;
-    color:white;
-    font-weight:bold;
+.input-group label {
+    display: block;
+    margin-bottom: 5px;
+    color: white;
+    font-weight: bold;
 }
 
-.input-group input{
-    width:100%;
-    padding:10px;
-    border:none;
-    border-radius:6px;
-    transition:0.3s ease;
+.input-group input {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 6px;
+    transition: 0.3s ease;
 }
 
-.input-group input:focus{
-    outline:none;
-    box-shadow:0 0 8px rgba(139,0,0,0.6);
+.input-group input:focus {
+    outline: none;
+    box-shadow: 0 0 8px rgba(139,0,0,0.6);
 }
 
-button{
-    width:100%;
-    padding:10px;
-    background-color:#8B0000;
-    border:none;
-    color:white;
-    border-radius:6px;
-    cursor:pointer;
-    font-size:16px;
-    margin-top:10px;
-    transition:0.3s ease;
+button {
+    width: 100%;
+    padding: 10px;
+    background-color: #8B0000;
+    border: none;
+    color: white;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 10px;
+    transition: 0.3s ease;
 }
 
-button:hover{
-    background-color:black;
+button:hover {
+    background-color: black;
 }
 
-.login-link{
-    text-align:center;
-    margin-top:15px;
-    font-size:14px;
+.login-link {
+    text-align: center;
+    margin-top: 15px;
+    font-size: 14px;
 }
 
-.login-link a{
-    color:white;
-    text-decoration:none;
-    font-weight:bold;
+.login-link a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
 }
 
-.login-link a:hover{
-    text-decoration:underline;
+.login-link a:hover {
+    text-decoration: underline;
+}
+
+/* TABLET */
+@media (max-width: 768px) {
+    .signup-container {
+        width: 420px;
+        max-width: 92%;
+        padding: 35px;
+        margin: 90px auto;
+    }
+
+    .signup-container h2 {
+        font-size: 28px;
+    }
+
+    .input-group label,
+    .login-link {
+        font-size: 14px;
+    }
+
+    .input-group input,
+    button {
+        font-size: 15px;
+    }
+}
+
+/* MOBILE */
+@media (max-width: 480px) {
+    .signup-container {
+        width: 95%;
+        padding: 25px 18px;
+        margin: 50px auto;
+        border-radius: 10px;
+    }
+
+    .signup-container h2 {
+        font-size: 24px;
+        margin-bottom: 16px;
+    }
+
+    .input-group {
+        margin-bottom: 12px;
+    }
+
+    .input-group label {
+        font-size: 14px;
+    }
+
+    .input-group input {
+        padding: 9px;
+        font-size: 14px;
+    }
+
+    button {
+        padding: 10px;
+        font-size: 14px;
+    }
+
+    .login-link {
+        font-size: 13px;
+        margin-top: 12px;
+    }
 }
