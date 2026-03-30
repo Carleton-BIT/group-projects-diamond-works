@@ -17,5 +17,5 @@ CU-Eats is a web application designed to help Carleton students find discounted 
 ---
 
 ## **Application Screenshot**
-<img width="1202" height="802" alt="image" src="https://github.com/user-attachments/assets/4d695524-d239-4ea4-b2d5-44a1b4939cba" />
+<img width="1893" height="803" alt="Screenshot 2026-03-26 102553" src="https://github.com/user-attachments/assets/7e66da7e-5b5c-4ee2-b990-93f580784ef9" />
 
