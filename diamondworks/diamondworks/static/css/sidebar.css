@@ -2,10 +2,10 @@ body {
   font-family: "Lato", sans-serif;
 }
 
-
 .sidenav {
   height: 100%;
   width: 0;
+  max-width: 280px;
   position: fixed;
   z-index: 2000;
   top: 0;
@@ -15,7 +15,6 @@ body {
   transition: 0.3s ease;
   padding-top: 60px;
 }
-
 
 .sidenav a,
 .dropdown-btn {
@@ -32,19 +31,16 @@ body {
   transition: 0.2s;
 }
 
-
 .sidenav a:hover,
 .dropdown-btn:hover {
   background: rgba(255, 255, 255, 0.1);
 }
-
 
 .dropdown-container {
   display: none;
   background-color: rgba(0, 0, 0, 0.3);
   padding-left: 10px;
 }
-
 
 .closebtn {
   position: absolute;
@@ -53,7 +49,6 @@ body {
   font-size: 30px;
   color: white;
 }
-
 
 .openbtn {
   font-size: 20px;
@@ -66,7 +61,61 @@ body {
   margin: 10px;
 }
 
-
 #main {
   transition: margin-left 0.3s ease;
+}
+
+/* Tablet */
+@media (max-width: 768px) {
+  .sidenav {
+    max-width: 240px;
+    padding-top: 55px;
+  }
+
+  .sidenav a,
+  .dropdown-btn {
+    font-size: 15px;
+    padding: 11px 18px;
+  }
+
+  .openbtn {
+    font-size: 18px;
+    padding: 8px 12px;
+    margin: 8px;
+  }
+
+  .closebtn {
+    font-size: 28px;
+    right: 16px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 480px) {
+  .sidenav {
+    max-width: 220px;
+    padding-top: 50px;
+  }
+
+  .sidenav a,
+  .dropdown-btn {
+    font-size: 14px;
+    padding: 10px 16px;
+  }
+
+  .openbtn {
+    font-size: 16px;
+    padding: 7px 10px;
+    margin: 6px;
+  }
+
+  .closebtn {
+    font-size: 26px;
+    top: 8px;
+    right: 14px;
+  }
+
+  .dropdown-container {
+    padding-left: 6px;
+  }
 }

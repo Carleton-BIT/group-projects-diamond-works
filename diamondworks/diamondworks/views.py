@@ -105,6 +105,9 @@ def dominos(request):
 def shawarmapalace(request):
     return render(request, "shawarmapalace.html")
 
+def pouletrouge(request):
+    return render(request, "pouletrouge.html")
+
 @login_required
 def account(request):
     context = {

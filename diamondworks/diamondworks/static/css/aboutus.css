@@ -1,37 +1,35 @@
-body {
+body { 
     font-family: Arial, sans-serif;
     margin: 0;
     background-color: white;
     color: black;
-
 }
 
 header {
     background: darkred;
     color: white;
     padding: 15px 40px;
-    align-items: center;
-    display: flex ;
+    display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
-.right-section{
+.right-section {
     display: flex;
     align-items: center;
     gap: 30px;
 }
 
-nav a{
-    color:white;
+nav a {
+    color: white;
     text-decoration: underline;
     margin-left: 20px;
     font-size: 16px;
     text-align: right;
 }
 
-nav a::after{
-    content:"";
+nav a::after {
+    content: "";
     position: absolute;
     width: 0%;
     height: 2px;
@@ -41,9 +39,10 @@ nav a::after{
     transition: 0.3s;
 }
 
-nav a:hover::after{
+nav a:hover::after {
     width: 100%;
 }
+
 .container {
     display: flex;
     flex-direction: column;
@@ -51,14 +50,14 @@ nav a:hover::after{
     padding: 40px 20px;
 }
 
-.search-bar input{
+.search-bar input {
     padding: 6px 10px;
-    border:none;
+    border: none;
     border-radius: 5px 0 0 5px;
     outline: none;
 }
 
-.search-bar button{
+.search-bar button {
     text-align: left;
 }
 
@@ -73,12 +72,12 @@ nav a:hover::after{
     transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
-.card:hover{
+.card:hover {
     transform: translateY(-5px);
     box-shadow: 0 8px 25px rgba(0,0,0,0.15);
 }
 
-.goals{
+.goals {
     background: white;
 }
 
@@ -86,18 +85,25 @@ nav a:hover::after{
     background: white;
 }
 
-
-
 h2 {
     margin-bottom: 15px;
     color: darkred;
-
 }
 
-p{
+p {
     line-height: 1.6;
     font-size: 16px;
+}
 
+.goals-list {
+    padding-left: 20px;
+    margin-top: 10px;
+}
+
+.goals-list li {
+    margin-bottom: 8px;
+    line-height: 1.6;
+    font-size: 16px;
 }
 
 footer {
@@ -108,3 +114,62 @@ footer {
     margin-top: 30px;
 }
 
+/* TABLET */
+@media (max-width: 768px) {
+    .container {
+        padding: 30px 15px;
+    }
+
+    .card {
+        width: 90%;
+        padding: 24px;
+        margin: 15px 0;
+    }
+
+    h2 {
+        font-size: 24px;
+    }
+
+    p,
+    .goals-list li {
+        font-size: 15px;
+    }
+}
+
+/* MOBILE */
+@media (max-width: 480px) {
+    .container {
+        padding: 20px 10px;
+    }
+
+    .card {
+        width: 95%;
+        padding: 18px;
+        margin: 12px 0;
+        border-radius: 12px;
+    }
+
+    .card:hover {
+        transform: none;
+    }
+
+    h2 {
+        font-size: 20px;
+        margin-bottom: 12px;
+    }
+
+    p,
+    .goals-list li {
+        font-size: 14px;
+        line-height: 1.5;
+    }
+
+    .goals-list {
+        padding-left: 18px;
+    }
+
+    footer {
+        padding: 12px;
+        font-size: 14px;
+    }
+}

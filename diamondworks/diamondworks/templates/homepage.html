@@ -3,6 +3,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CU Eats</title>
     <link rel="stylesheet" href="{% static 'css/header.css' %}">
     <link rel="stylesheet" href="{% static 'css/sidebar.css' %}">
@@ -24,13 +25,12 @@
         <span>CUEats</span>
     </a>
 
-    <h1>CU-Eats</h1>
-    <input type="text" class="search-bar" placeholder="Search">
+   
+   
 
     <nav class="nav-links">
         <a href="{% url 'homepage' %}">Home</a>
-        <a href="{% url 'about' %}">About</a>
-        <a href="{% url 'support' %}">Support</a>
+        
 
         {% if user.is_authenticated %}
             <form method="POST" action="{% url 'logout' %}" style="display:inline;">
@@ -55,8 +55,8 @@
                 <h2>Shawarma Palace</h2>
                 <p>Location: Ottawa, ON</p>
                 <p>Discount: 20% Off</p>
-                <a href="{% url 'shawarmapalace' %}"class="view-details-btn">View Details</a>
-</a>
+                <a href="{% url 'shawarmapalace' %}" class="view-details-btn">View Details</a>
+
             </div>
         </div>
 
@@ -83,18 +83,18 @@
                 <a href="{% url 'dominos' %}" class="view-details-btn">View Details</a>
             </div>
         </div>
-
-        <div class="card">
-            <div class="image-box">
-                <img src="{% static 'img/unistudents.jpg' %}" alt="Restaurant 4 Image">
-            </div>
-            <div class="info">
-                <h2>Restaurant 4</h2>
-                <p>Location:</p>
-                <p>Discount: 15% Off</p>
-                <a href="#" class="view-details-btn">View Details</a>
-            </div>
-        </div>
+<div class="card">
+    <div class="image-box">
+        <img src="{% static 'img/images/pouletrougelogo.png' %}" alt="Poulet Rouge Logo">
+    </div>
+    <div class="info">
+        <h2>Poulet Rouge</h2>
+        <p>Location: Ottawa, ON</p>
+        <p>Discount: Exclusive Deals</p>
+        <a href="{% url 'pouletrouge' %}" class="view-details-btn">View Details</a>
+    </div>
+</div>
+        
 
     </section>
 </main>

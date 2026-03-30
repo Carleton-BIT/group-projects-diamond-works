@@ -11,7 +11,7 @@
     justify-content: space-between;
     align-items: center;
     box-shadow: 0 4px 10px rgba(0,0,0,0.3);
-    overflow: hidden;
+    flex-wrap: wrap; /* important */
 }
 
 .logo {
@@ -22,7 +22,6 @@
     letter-spacing: 1px;
     text-decoration: none;
     color: white;
-    flex-shrink: 0;
 }
 
 .logo span {
@@ -40,8 +39,8 @@
     display: flex;
     align-items: center;
     gap: 10px;
-    flex-wrap: nowrap;
-    overflow: hidden;
+    flex-wrap: wrap; /* allows wrapping on small screens */
+    justify-content: flex-end;
 }
 
 .nav-links a {
@@ -49,7 +48,6 @@
     color: white;
     font-weight: 500;
     transition: 0.3s ease;
-    white-space: nowrap;
     font-size: 14px;
 }
 
@@ -70,10 +68,61 @@
     border-radius: 20px;
     cursor: pointer;
     font-weight: bold;
-    white-space: nowrap;
     font-size: 14px;
 }
 
 .nav-links button:hover {
     background: #f0f0f0;
+}
+
+/* TABLET */
+@media (max-width: 768px) {
+    .main-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+
+    .logo {
+        font-size: 20px;
+    }
+
+    .nav-links {
+        width: 100%;
+        justify-content: flex-start;
+    }
+
+    .nav-links a,
+    .nav-links button {
+        font-size: 13px;
+        padding: 6px 10px;
+    }
+}
+
+/* MOBILE */
+@media (max-width: 480px) {
+    .main-header {
+        padding: 12px 15px;
+    }
+
+    .logo {
+        font-size: 18px;
+    }
+
+    .logo-img {
+        width: 32px;
+        height: 32px;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 6px;
+    }
+
+    .nav-links a,
+    .nav-links button {
+        font-size: 12px;
+        padding: 5px 8px;
+    }
 }

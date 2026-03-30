@@ -1,83 +1,74 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
-<html>
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
 <head>
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-  <meta http-equiv="Content-Style-Type" content="text/css">
-  <title></title>
-  <meta name="Generator" content="Cocoa HTML Writer">
-  <meta name="CocoaVersion" content="2685.2">
-  <style type="text/css">
-    p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica}
-    p.p2 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica; min-height: 14.0px}
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Poulet Rouge</title>
+
+    <link rel="stylesheet" href="{% static 'css/header.css' %}">
+    <link rel="stylesheet" href="{% static 'css/sidebar.css' %}">
+    <link rel="stylesheet" href="{% static 'css/resturantpage.css' %}">
 </head>
 <body>
-<p class="p1">&lt;!DOCTYPE html&gt;</p>
-<p class="p1">&lt;html lang="en"&gt;</p>
-<p class="p1">&lt;head&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;meta charset="UTF-8"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;title&gt;Poulet Rouge&lt;/title&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;link rel="stylesheet" href="resturantpage.css"&gt;</p>
-<p class="p1">&lt;/head&gt;</p>
-<p class="p1">&lt;body&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;header class="header"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="logo-container"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;img src="https://play-lh.googleusercontent.com/2i29bmeCa9agvQiaRWnNpkI6UCPVd2Fs4lTHURJSi1ZFCXSwTu8XpKjjPNP-Kr9seY4" alt="Poulet Rouge Logo" class="logo"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;h1&gt;Poulet Rouge&lt;/h1&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;p class="discount"&gt;Up to 20% off and more!&lt;/p&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;/header&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;main class="food-section"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="food-grid"&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="food-item"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;img src="https://static.tildacdn.one/tild3662-3231-4961-a133-616230306137/Image_38.webp" alt="BBQ Rouge Bowl"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="food-info"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;h3&gt;BBQ Rouge Bowl&lt;/h3&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;p&gt;2 BASES + 1 SAUCE + 7 TOPPINGS&lt;/p&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;p&gt;20% Off&lt;/p&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="food-item"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;img src="https://static.tildacdn.one/tild3131-6465-4263-b832-653266303938/Image_39.webp" alt="Rouge Poutine"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="food-info"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;h3&gt;Rouge Poutine&lt;/h3&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;p&gt;1 POUTINE + 1 SAUCE + 3 TOPPINGS&lt;/p&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;p&gt;20% Off&lt;/p&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="food-item"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;img src="https://static.tildacdn.one/tild3664-3030-4439-b066-636231643437/Image_40.webp" alt="Mini Rouge"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="food-info"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;h3&gt;Mini Rouge&lt;/h3&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;p&gt;1 BASE + 1 SAUCE + 3 TOPPINGS&lt;/p&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="food-item"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;img src="https://storage.googleapis.com/ueat-catalog-images-production/01924359-c867-723c-a73d-14f24cdcb430/dd9e4926-dbfb-4853-bea1-ecc449f1a03f" alt="Choco Mousse"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="food-info"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;h3&gt;Choco Mousse&lt;/h3&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;p&gt;Sweet dessert add-on&lt;/p&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;p&gt;15% Off&lt;/p&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;/main&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;footer class="footer"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;h3&gt;Limited Time Offers 🥙&lt;/h3&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;p&gt;Scan now and grab your Poulet Rouge deal!&lt;/p&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;img src="https://docs.lightburnsoftware.com/legacy/img/QRCode/ExampleCode.png" alt="QR Code" class="qr-code"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;/footer&gt;</p>
-<p class="p2"><br></p>
-<p class="p1">&lt;/body&gt;</p>
-<p class="p1">&lt;/html&gt;</p>
+
+{% include 'sidebar.html' %}
+
+<header class="main-header">
+    <a href="{% url 'homepage' %}" class="logo">
+        <img src="{% static 'img/logo.png' %}" alt="CU Eats Logo" class="logo-img">
+        <span>CUEats</span>
+    </a>
+
+    <nav class="nav-links">
+        <a href="{% url 'homepage' %}">Home</a>
+
+        {% if user.is_authenticated %}
+            <form method="POST" action="{% url 'logout' %}">
+                {% csrf_token %}
+                <button type="submit">Logout</button>
+            </form>
+        {% else %}
+            <a href="{% url 'signup' %}">Sign Up</a>
+            <a href="{% url 'login' %}">Log In</a>
+        {% endif %}
+    </nav>
+</header>
+
+<header class="header">
+    <div class="logo-container">
+        <img src="{% static 'img/images/pouletrougelogo.png' %}" alt="Poulet Rouge Logo" class="restaurant-logo">
+    </div>
+    <h1>Poulet Rouge</h1>
+    <p class="discount">Exclusive Deals!</p>
+</header>
+
+<main class="food-section">
+    <div class="food-grid">
+
+        <div class="food-item">
+            <img src="{% static 'img/images/rougemini.webp' %}" alt="Rouge Mini Bowl">
+            <div class="food-info">
+                <h3>Rouge MINI</h3>
+                <p>Buy 1 Get 1 free!</p>
+            </div>
+        </div>
+
+        <div class="food-item">
+            <img src="{% static 'img/images/poutine.webp' %}" alt="Rouge Poutine">
+            <div class="food-info">
+                <h3>Rouge Poutine</h3>
+                <p>20% off</p>
+            </div>
+        </div>
+
+    </div>
+</main>
+
+<footer class="footer">
+    <h3>Scan to apply discount</h3>
+    <img src="{% static 'img/images/ExampleCode.png' %}" alt="QR Code" class="qr-code">
+</footer>
+
 </body>
 </html>
