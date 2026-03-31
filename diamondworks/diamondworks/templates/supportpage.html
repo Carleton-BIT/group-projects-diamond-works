@@ -10,11 +10,11 @@
     <link rel="stylesheet" href="{% static 'css/header.css' %}">
     <link rel="stylesheet" href="{% static 'css/supportpage.css' %}">
     <link rel="stylesheet" href="{% static 'css/sidebar.css' %}">
-
 </head>
 
 <body>
 {% include 'sidebar.html' %}
+
 <header class="main-header">
     <a href="{% url 'home' %}" class="logo">
         <img src="{% static 'img/logo.png' %}" alt="Logo" class="logo-img">
@@ -27,8 +27,6 @@
     {% else %}
         <a href="{% url 'home' %}">Home</a>
     {% endif %}
-
-    
 
     {% if user.is_authenticated %}
         <form method="POST" action="{% url 'logout' %}">
@@ -52,24 +50,38 @@
 
     <button class="FAQ-question">How do I create an account?</button>
     <div class="FAQ-answer">
-        <p>You can sign up by clicking the Sign Up button and filling out the registration form.</p>
+        <p>You can sign up by visiting the <a href="{% url 'signup' %}">Sign Up</a> page and registering with your Carleton email.</p>
+    </div>
+
+    <button class="FAQ-question">Who can use CU-Eats?</button>
+    <div class="FAQ-answer">
+        <p>Only Carleton students with a valid Carleton email can access the platform.</p>
+    </div>
+
+    <button class="FAQ-question">How do I redeem a discount?</button>
+    <div class="FAQ-answer">
+        <p>Log in, select a partner franchise, and scan the QR code to access the discount.</p>
+    </div>
+
+    <button class="FAQ-question">How often can I use a discount?</button>
+    <div class="FAQ-answer">
+        <p>Each QR code can only be scanned once per day.</p>
+    </div>
+
+    <button class="FAQ-question">Why are discounts updated every semester?</button>
+    <div class="FAQ-answer">
+        <p>Discounts are refreshed each semester to ensure that only active students have access and that offers remain up to date.</p>
     </div>
 
     <button class="FAQ-question">How do I reset my password?</button>
     <div class="FAQ-answer">
         <p>Click the forgot password link on the login page.</p>
     </div>
-</section>
 
-<section class="contact-support">
-    <h2>Contact Support</h2>
-
-    <form>
-        <input type="text" placeholder="Your Name">
-        <input type="email" placeholder="Your Email">
-        <textarea placeholder="Describe your issue"></textarea>
-        <button type="submit">Send Message</button>
-    </form>
+    <button class="FAQ-question">What if I can’t log in?</button>
+    <div class="FAQ-answer">
+        <p>Make sure you are using your Carleton email and correct password, or use the password reset option.</p>
+    </div>
 </section>
 
 <footer>
@@ -91,5 +103,4 @@ document.querySelectorAll(".FAQ-question").forEach(button => {
 </script>
 
 </body>
-
 </html>

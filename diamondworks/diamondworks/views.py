@@ -91,7 +91,8 @@ def about(request):
 
 
 def support(request):
-    return render(request, "supportpage.html")
+
+    return render(request, "supportpage.html")  
 
 
 
